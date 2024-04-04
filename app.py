@@ -1,8 +1,9 @@
 from flask import Flask, jsonify, request, render_template
-from playlist_generator import PlayListGenerator
-from spotify_manager import SpotifyManager
-from settings import load_env
+from utilities.playlist_generator import PlayListGenerator
+from utilities.spotify_manager import SpotifyManager
+from utilities.settings import load_env
 import logging
+
 
 log = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -29,7 +30,8 @@ def create_playlist():
     content = request.json
     playlist_name = content.get("playlist_name")
     playlist_prompt = content.get("playlist_prompt")
-    count = content.get("count", 12)  # Default to 12 if not provided
+    count = content.get("count")
+    print(f"count here: {count}")
 
     if not playlist_prompt:
         return (
