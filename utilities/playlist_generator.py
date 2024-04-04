@@ -19,7 +19,7 @@ class PlayListGenerator:
         self.api_key = os.getenv("OPENAI_API_KEY")
         openai.api_key = self.api_key
 
-    def generate_playlist(self, prompt, name, count=8):
+    def generate_playlist(self, prompt, count=8):
         messages = [
             {
                 "role": "system",
@@ -35,7 +35,7 @@ class PlayListGenerator:
             {"role": "assistant", "content": PlayListGenerator.SAMPLE_RESPONSE_JSON},
             {
                 "role": "user",
-                "content": f"Generate a playlist of {count} songs based on this prompt: {prompt}. Future playlist name will be: {name} and you don't need to handle with the playlist name",
+                "content": f"Generate a playlist of {count} songs based on this prompt: {prompt}.",
             },
         ]
 

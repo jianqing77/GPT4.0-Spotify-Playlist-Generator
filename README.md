@@ -4,7 +4,7 @@ Welcome to the GPT4.0-Spotify-Playlist-Generator, where your words shape the sou
 
 This innovative project harnesses the power of OpenAI's GPT-4 to interpret your musical desires and the Spotify API to create a playlist that resonates with your mood, activity, or any theme you express in plain text. Get ready to elevate your music experience with playlists that are personalized just for you, and seamlessly integrated into your Spotify account.
 
-![demo](./static/images/demo-main.png)
+![gif](./static/images/demo-video.gif)
 
 ## Features
 
